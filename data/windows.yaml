@@ -2,4 +2,6 @@
 classes:
 - chrome
 - test
+- test2
+- test3
 chrome::version: '50.0.2661.102'

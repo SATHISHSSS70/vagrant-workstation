@@ -14,16 +14,16 @@ class test {
     ensure  => present,
 	  content => epp('test/pupp.txt.epp'),
   }
-  
+
   file { 'c:\temp\temp\pupp1.txt':
     ensure  => present,
 	  content => file('test/pupp1.txt'),
   }
-  
+
   service { 'winrm':
     ensure => stopped,
   }
-  
+
   exec { 'test':
     command   => 'cmd.exe /c "mkdir c:\temp\temp\temp"',
 	  creates   => 'c:\temp\temp\temp',
@@ -38,5 +38,8 @@ class test {
   file { 'c:\temp\ram':
     ensure => directory,
   }
+
+}
+
 
 }
